@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="inc">+</button>
+    <h3 id="counter">0</h3>
+    <button id="desc">-</button>
+</body>
+
+<script>
+
+    let inc = document.getElementById('inc');
+    let desc = document.getElementById('desc');
+    let counter = document.getElementById('counter');
+
+    let count=0;
+    inc.addEventListener('click', ()=> {
+        count++;
+        counter.textContent=count;
+    });
+
+    desc.addEventListener('click', ()=> {
+        count--;
+        counter.textContent=count;
+    });
+
+</script>
+</html>
