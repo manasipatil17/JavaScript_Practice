@@ -54,4 +54,27 @@ const a2=12;
 //a2=11;  //const cannot be redeclared and cannot be reassgin
 
 
+console.log("====================================================");
 
+let xx=12;
+console.log(xx);
+one();
+two();
+
+function one() {
+    let xx=100;
+    console.log(xx);
+}
+
+
+function two() {
+    let xx=1020;
+    console.log(xx);
+}
+
+let result= "abc"/3;
+console.log(result);
+
+let name1="manasi";
+let name2="patil";
+console.log(name1+name2);

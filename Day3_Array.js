@@ -52,3 +52,8 @@ console.log(topElectronics);
 // 9. Get uppercase product names
 const upperNames = products.map(p => p.name.toUpperCase());
 console.log(upperNames);
+
+console.log("------------------------------------------------------------------------------");
+let mixed = ["Hello", 42, true, null, { name: "John" }, [1, 2]];
+console.log(mixed); // "John"
+
