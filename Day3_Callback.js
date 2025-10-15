@@ -13,3 +13,13 @@ arr2.forEach((val) => {
     console.log(val);
     
 });
+
+console.log("=========================================================");
+//square of element using for each
+
+let arr3 =[12,33,21,44,56,54];
+arr3.forEach((val) =>{
+    console.log(val+" = "+val*val);
+    
+})
+
