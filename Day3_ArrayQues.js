@@ -15,30 +15,31 @@ const products = [
 
 // 1. Get all product names in stock
 
-const inStockNames = products.filter(p=> p.inStock).map(p=> p.name);
+const inStockNames = products.filter((p)=> p.inStock).map((p)=> p.name);
 console.log(inStockNames);
 
 
 // 2. List names of all products
 
-const allNames = products.map(p => p.name);
+const allNames = products.map((p) => p.name);
 console.log(allNames);
 
 // 3. Get products above 10,000
 
-const above10k = products.filter(p => p.price > 10000).map(p => p.name);
-console.log(above10k);
+let priceFilter=products.filter((p)=> p.price>10000);
+console.log(priceFilter);
 
 // 4. Get names of products with rating ≥ 4.5
-const highRated = products.filter(p => p.rating >= 4.5).map(p => p.name);
+const highRated= products.filter((p)=> p.rating>=4.5).map((p)=>p.name);
 console.log(highRated);
+
 
 // 5. Get discounted prices (10% off on all products)
 const discounted = products.map(p => ({ name: p.name, price: p.price * 0.9 }));
 console.log(discounted);
 
 // 6. List categories of in-stock products
-const inStockCategories = products.filter(p => p.inStock).map(p => p.category);
+const inStockCategories = products.filter(p => p.inStock===true).map(p => p.category);
 console.log(inStockCategories);
 
 // 7. Get products under 5000 with only name and price
