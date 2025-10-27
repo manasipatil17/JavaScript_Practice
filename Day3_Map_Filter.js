@@ -1,4 +1,4 @@
-console.log("====================MAP=======================");4
+console.log("====================MAP=======================");
 console.log("map iteration");
 
 let numbers =[1,3,4,5,6,7];
