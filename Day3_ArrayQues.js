@@ -47,7 +47,7 @@ const under5k = products.filter(p => p.price < 5000).map(p => ({ name: p.name, p
 console.log(under5k);
 
 // 8. Get products in Electronics category with rating ≥ 4.5
-const topElectronics = products.filter(p => p.category === "Electronics" && p.rating >= 4.5);
+const topElectronics = products.filter((p) => p.category === "Electronics" && p.rating >= 4.5);
 console.log(topElectronics);
 
 // 9. Get uppercase product names

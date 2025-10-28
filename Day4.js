@@ -61,7 +61,7 @@ const products = [
     category: "Electronics",
     price: 15000,
     inStock: true,
-    rating: 4.4,
+    rating: 4.6,
   },
   {
     id: 9,
@@ -102,13 +102,16 @@ console.log("Remove Item");
 products.pop(); // remove last element
 console.log(products);
 
-console.log("find");
-const res = products.find((prd) => prd.rating === 3.5);
-console.log(res);
+console.log("find/search an item");
+const findItem = products.find((prd)=> prd.rating===4.5);
+console.log(findItem);
+
+
 
 console.log("Specific portion");
-const slicedData = products.slice(3, 5); // start index include & end index exclude
+const slicedData = products.slice(3,5);
 console.log(slicedData);
+
 
 console.log("every");
 const isCorrect = products.every((prd) => prd.rating === 4.5);
