@@ -1,8 +1,8 @@
-async function getData() {
+async function getData(){
+    let rawDate= await fetch('https://dummyjson.com/todo/1');
+    let response=await rawDate.json();
+    console.log(response);
     
-    let rawData = await fetch('https://dummyjson.com/todo/1');
-    let res = await rawData.json();
-    console.log(res);
 }
 
 //getData();
@@ -10,7 +10,7 @@ async function getData() {
 console.log("---------------------try catch----------------------------------------");
 async function getData2() {
     try{
-    let rawData = await fetch('https://dummjson.com/todo/1');
+    let rawData = await fetch('https://dummyjson.com/todo/1');
     let res = await rawData.json();
     console.log(res);
 }
@@ -20,7 +20,7 @@ console.log("something went wrong...");
 }
 }
 
-getData2();
+ //getData2();
 
 console.log("-----------------------then and catch-------------------------------------");
 function getData3(){
@@ -31,4 +31,4 @@ function getData3(){
 
 }
 
-getData3();
+getData3(); 
