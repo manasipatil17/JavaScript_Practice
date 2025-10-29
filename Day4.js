@@ -61,7 +61,7 @@ const products = [
     category: "Electronics",
     price: 15000,
     inStock: true,
-    rating: 4.6,
+    rating: 4.5,
   },
   {
     id: 9,
