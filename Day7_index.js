@@ -1,11 +1,12 @@
-console.log("inside JS");
-console.dir(document.body.childNodes);
-console.dir(document.body.childNodes[1].innerText);
+console.log("external JS");
 
+console.dir(document.body.childNodes[1].innerText);
+document.body.childNodes[1].innerText="hello.....";
 //how to access element
 
-let element=document.getElementById('myH1');
+let element = document.getElementById('myH1');
 console.log(element.innerText);
+
 
 //how to modify element data
 
@@ -13,8 +14,8 @@ element.innerText="This is updated heading";
 
 //how to add new element
 let body=document.body;
-let newElement= document.createElement('b');
-newElement.innerText = "this is created by JS";
+let newElement =document.createElement('b');
+newElement.innerText="This is added by JS";
 body.appendChild(newElement);
 
 //how to remove an element
