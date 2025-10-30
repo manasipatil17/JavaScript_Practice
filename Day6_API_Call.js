@@ -25,10 +25,10 @@ console.log("something went wrong...");
 console.log("-----------------------then and catch-------------------------------------");
 function getData3(){
     fetch('https://dummyjson.com/todo/1')
-    .then((rawData) => rawData.json())
-    .then((data) => console.log(data))
-    .catch((e) => console.log("something went wrong..."));
-
+   .then((rawData)=> rawData.json())
+   .then((data)=> console.log(data))
+   .catch((e)=> console.log("data not found"));
+   
 }
 
 getData3(); 
