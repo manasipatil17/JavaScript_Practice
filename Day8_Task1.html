@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1 to 10</title>
+    <title>tables</title>
 </head>
 <body>
-    <ul id="ul">
-        
-    </ul>
+    <input type="text" id="val" placeholder="Enter number">
+    <button id="btn">Print Table</button>
+    <table id="tbl" border="1">
+    
+    </table>
+    
 </body>
 <script>
-let ul=document.getElementById('ul');
-for(let i=1;i<=10;i++){
-    let li=document.createElement('li');
-    li.innerText=i;
-    ul.appendChild(li);
+    
+let tbl=document.getElementById('tbl');
+let btn=document.getElementById('btn');
 
+btn.addEventListener("click",()=>{
+     let value=document.getElementById('val').value;
+    tbl.innerHTML = '';
+for(let i=1;i<=10;i++){
+let tr=document.createElement('tr');
+let th=document.createElement('th');
+if(i%2==0){
+    th.style.backgroundColor='yellow';
 }
+else{
+    th.style.backgroundColor='red';
+}
+th.innerText=i*value;
+tr.appendChild(th);
+tbl.appendChild(tr);
+    }
+})
+    
 </script>
 </html>
