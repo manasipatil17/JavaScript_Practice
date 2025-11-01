@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables 1 to n</title>
+
+    <style>
+    /* This makes tables appear side by side */
+    #output {
+      display: flex;
+      flex-wrap: wrap; /* moves to new line if too many tables */
+      gap: 10px; /* spacing between tables */
+      padding-top: 10px;
+    }
+    table {
+      border-collapse: collapse;
+      text-align: center;
+    }
+    td {
+      padding: 5px;
+      width: 40px;
+    }
+  </style>
+</head>
+<body>
+ <input type="text" id="val" placeholder="Enter number">
+ <button id="btn">Print Tables</button>
+<div id="output"></div>
+</body>
+
+<script>
+
+let btn=document.getElementById('btn');
+let output = document.getElementById('output');
+
+btn.addEventListener('click', ()=> {
+    let value=document.getElementById('val').value;
+    output.innerHTML='';
+    for(let i=1;i<=value;i++){
+
+        // let title = document.createElement("h3");
+        // title.textContent = `Table of ${i}`;
+        // output.appendChild(title);
+        let table = document.createElement("table");
+        table.border = "1";
+
+        for(let j=1;j<=10;j++){
+        let row=document.createElement('tr');
+        let cell=document.createElement('td');
+        cell.textContent=`${i*j}`;
+        if(j%2==0){
+    cell.style.backgroundColor='yellow';
+}
+else{
+    cell.style.backgroundColor='red';
+}
+
+//th.innerText=i*value;
+row.appendChild(cell);
+table.appendChild(row);
+    }
+    output.appendChild(table);
+    }
+});
+
+</script>
+</html>
